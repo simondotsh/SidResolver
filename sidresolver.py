@@ -20,8 +20,9 @@ for sid in requested_sids:
     name = 'NOT_FOUND'
     type = 'NOT_FOUND'
 
-    if mapped_sids[sid]['name']:
-        name = mapped_sids[sid]['name']
-        type = mapped_sids[sid]['type']
+    if sid in mapped_sids:
+        if mapped_sids[sid]['name']:
+            name = mapped_sids[sid]['name']
+            type = mapped_sids[sid]['type']
 
     print(f'{sid},{name},{type}')
